@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="row">
+	<div class="medium-9 columns">
+
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  
+		    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+		    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+ 		
+
+			  <div class="post-content" itemprop="articleBody">
+			    <img src="/images/{{ page.thumb }}" id="main-img" />{{ content }}
+			  </div>
+
+
+
+		</article>
+
+	</div>
+	<div class="medium-3 columns ad">
+		<a href="#"><img src="/images/banner-ad.png" /></a>
+	</div>
+</div>

@@ -1,0 +1,258 @@
+$font: Raleway;
+$nav-color: #000;
+$hover-link-color: #457f8d;
+$secondary-font-color: #707070;
+
+$accent-color-1: #ebebeb;
+$accent-color-2: #ccd8db;
+$footer-color: #c6c6c6;
+
+$main-titles-size: 2.2em;
+$main-titles-leading: 1em;
+$main-titles-size-m: 1.5em;
+$paragraph-size: 1.1em;
+$post-title-size:3.2em;
+
+$main-padding: 20px;
+$sections-margin: 50px;
+
+* {
+    font-family:$font;
+}
+
+html,body {
+    height:100%;
+}
+
+body {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 32%, #dbdbdb 59%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 32%,#dbdbdb 59%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 32%,#dbdbdb 59%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration:none;
+    color:$nav-color;
+    font-size:1.2em;
+}
+
+a:hover {
+    color:$hover-link-color;
+}
+
+p {
+    font-size:$paragraph-size;
+}
+
+header {
+    padding:50px 0;
+}
+
+nav {
+    float:right;
+}
+
+nav a {
+    margin-right:30px;
+}
+
+nav a:last-child {
+    margin-right:0;
+}
+
+.menu-icon {
+    display:none;
+}
+
+.sections {
+    margin: $sections-margin auto;
+}
+
+.main-post {
+    display:block;
+    background:$accent-color-1;
+    border: 3px solid $accent-color-2;
+}
+
+a.main-post-title {
+    font-size:$main-titles-size;
+    padding: $main-padding $main-padding 0 $main-padding;
+    display:block;
+    line-height: $main-titles-leading;
+}
+
+.main-post span {
+    margin-left: $main-padding;
+    color:$secondary-font-color;
+}
+
+.sub-posts span {
+    color:$secondary-font-color;
+}
+
+.main-post p {
+    margin: $main-padding;
+}
+
+.main-thumb {
+    width:auto;
+    height:157px;
+    overflow:hidden;
+    margin-top:$main-padding;
+}
+
+.sub-thumb {
+    width:124px;
+    height:124px;
+    position:relative;
+    overflow:hidden;
+    border-radius: 50%;
+    background-position: center;
+    margin-bottom:20px;
+}
+
+a.sub-post-title {
+    font-size:$main-titles-size;
+    display:block;
+    line-height:$main-titles-leading;
+}
+
+.sub-posts {
+    margin-bottom: $main-padding;
+}
+
+.ad {
+    text-align:center;
+    margin-bottom: $main-padding * 2;
+}
+
+.pagination {
+    clear:both;
+    display:block;
+}
+
+footer {
+    background-color:$footer-color;
+    min-height:160px;
+}
+
+ul#social-links {
+    list-style-type:none;
+    margin:0;
+    float:right;
+}
+
+ul#social-links li {
+    display:inline;
+    float:left;
+    margin: $main-padding * 2 30px 0 0;
+}
+
+.pagination {
+    text-align:center;
+}
+
+a.previous, a.next {
+    font-weight:bold;
+    margin: $main-padding * 2 $main-padding $main-padding * 2 0;
+    display:inline-block;
+    background:$footer-color;
+    padding: $main-padding;
+}
+
+#footer-logo {
+    width:40%;
+    margin-top: $main-padding * 2;
+}
+
+h1.post-title {
+    font-size:$post-title-size;
+    font-weight:300;
+    line-height: $main-titles-leading;
+    margin-bottom:0;
+}
+
+img#main-img {
+    display:inline;
+    float:left;
+    padding: 0 $main-padding $main-padding 0;
+}
+
+.post-content {
+    margin-bottom: $main-padding * 3;
+}
+
+.sidebar-ad {
+    margin-top: $main-padding * 2;
+}
+
+.post-meta {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 64.063em) {
+
+    a.main-post-title, a.sub-post-title {
+        font-size:$main-titles-size-m;
+        line-height: $main-titles-leading;
+    }
+
+    .sub-posts {
+        text-align:center;
+    }
+
+    .sub-thumb {
+        margin: 0 auto $main-padding auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 40em) {
+
+    .main-post {
+        text-align:center;
+        margin-bottom: $main-padding;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a.menu-icon {
+        display:inline;
+    }
+
+    .trigger {
+        display:none;
+        width:100%;
+        margin-top: $main-padding;
+    }
+
+    nav {
+        display:block;
+        clear:both;
+        width:100%;
+        text-align:right;
+        margin-top:-45px;
+    }
+
+    .trigger a {
+        display:block;
+        width:100%;
+        border-bottom: 1px solid $footer-color;
+        margin-right: -$main-padding;
+        padding: $main-padding / 2 0;
+        text-align:left;
+    }
+
+}
+
+@media only screen and (min-width: 40em) {
+    .trigger {
+        display:block !important;
+    }
+}

@@ -1,0 +1,28 @@
+
+
+<header>
+
+  <div class="row">
+    <div class="medium-6 columns">
+      <a class="site-title" href="{{ site.baseurl }}/"><img src="/images/logo.png" /></a>
+    </div>
+
+    <div class="medium-6 columns">
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <img src="/images/menu.png" />
+      </a>
+
+      <div class="trigger">
+          {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endif %}
+          {% endfor %}
+      </div>
+      
+    </nav>
+    </div>
+  </div>
+
+</header>
